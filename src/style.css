@@ -1,0 +1,28 @@
+body {
+  background-image: url(images/spontini.jpg);
+  font-size: 55px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+}
+
+.header-element {
+  
+}
+
+.body {
+  background-color: aqua;
+}
+
+.body-element {
+
+}
+
+.footer {
+  background-color: cadetblue;
+  color: white;
+  font-size: 25px;
+}
