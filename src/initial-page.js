@@ -7,7 +7,7 @@ export default function renderInitialPage   () {
   container.appendChild(header);
 
   const body = document.createElement('div');
-  body.classList.add('body');
+  body.classList.add('body', 'show');
   container.appendChild(body);
 
   const footer = document.createElement('div');
@@ -41,4 +41,6 @@ export default function renderInitialPage   () {
   // Footer
   const footerText = addElement('Developed by Ricardo Quirarte', 'footer');
   footer.appendChild(footerText);
+
+  return { contact, body, menu, home }
 }
