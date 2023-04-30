@@ -1,45 +1,41 @@
+import elementFactory from "./factory";
+// import logo from './assets';**
+
 export default function renderInitialPage   () {
   const container = document.querySelector('#content');
 
   // DOM creating elements
-  const header = document.createElement('div');
-  header.classList.add('header');
+  const header = elementFactory('header');
   container.appendChild(header);
-
-  const body = document.createElement('div');
-  body.classList.add('body', 'show');
+  const body = elementFactory('body', '', 'show');
   container.appendChild(body);
-
-  const footer = document.createElement('div');
-  footer.classList.add('footer');
+  const footer = elementFactory('footer');
   container.appendChild(footer);
 
-  // Function
-  function addElement(text, className) {
-    const div = document.createElement('p');
-    div.textContent = (text);
-    div.classList.add(className);
-    return div;
-  }
-
   // Header
-  const home =  addElement('home', 'header-element');
-  const menu = addElement('menu', 'header-element');
-  const contact = addElement('contact', 'header-element');
+  const home =  elementFactory('header-element', 'home');
+  const menu = elementFactory('header-element', 'menu');
+  const contact = elementFactory('header-element', 'contact');
   header.appendChild(home);
   header.appendChild(menu);
   header.appendChild(contact);
 
   // Body
-  const logo = addElement('SPONTINI', 'body-element');
-  const description = addElement('The placer of eating pizza', 'body-element');
-  const someText = addElement('Expect soon our new location in Mexico!', 'body-element');
+
+
+  // const mylogo = new Image();**
+  // mylogo.src = logo;**
+
+
+  const logo = elementFactory('body-element', '', 'logo');
+  const description = elementFactory('body-element', 'The placer of eating pizza');
+  const someText = elementFactory('body-element', 'Expect soon our new location in Mexico!');
   body.appendChild(logo);
   body.appendChild(description);
   body.appendChild(someText);
 
   // Footer
-  const footerText = addElement('Developed by Ricardo Quirarte', 'footer');
+  const footerText = elementFactory('footer', 'Developed by Ricardo Quirarte');
   footer.appendChild(footerText);
 
   return { contact, body, menu, home }

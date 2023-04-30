@@ -1,11 +1,17 @@
-export default function renderContact   () {
-    const container = document.querySelector('#content');
+import elementFactory from "./factory";
 
-    const contact = document.createElement('div');
-    contact.classList.add('contact-page', 'hide');
-    contact.textContent = 'For more information about the pizzeria please call 2281170086';
+export default function renderContact() {
+    const container = document.querySelector('#content');
+  
+    // Contact Div
+    const contact = elementFactory('contact-page', '', 'hide');
     container.appendChild(contact);
 
-    return { contact };
+    // Contact elements
+    const info = elementFactory('contact-elements', 'Born in 1953 from Bottega Cibi Cotti in the eponymous street, Spontini is now a chain of over 30 pizzerias in Italy and abroad. Well known for its high slice, crispy base, and the use of 0 km ingredients.');
+    contact.appendChild(info);
+    const number = elementFactory('contact-elements', 'For more information about the pizzeria please call 2281170086', 'number');
+    contact.appendChild(number);
 
+    return { contact };
   }

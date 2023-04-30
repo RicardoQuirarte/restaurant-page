@@ -1,5 +1,4 @@
 body {
-  background-image: url(images/spontini.jpg);
   margin: 0px;
   color: white;
 }
@@ -29,11 +28,10 @@ body {
 }
 
 .body {
+  background-image: url(assets/spontini.jpg);
   font-size: 55px;
   height: 82vh;
-  display: grid;
   place-content: center;
-  
 }
 
 .body-element {
@@ -44,6 +42,22 @@ body {
   padding-bottom: 10px;
 }
 
+.logo {
+  background-image: url(./assets/logo-spontini.png);
+  height: 125px;
+}
+
+.menu {
+  color: black;
+  font-size: 55px;
+  height: 82vh;
+  background-image: url(assets/spontini.jpg);
+}
+
+.menu-elements {
+  background-color: beige;
+}
+
 .footer {
   color: white;
   font-size: 25px;
@@ -52,23 +66,28 @@ body {
   display: grid;
   place-content: center;
   background-color: black;
-  position: static;
+  position: absolute;
+  bottom: 0px;
   width: 100%;
 }
 
-
-
-
 .contact-page {
-  background-color: rgb(145, 185, 145);
-  font-size: 55px;
-  height: 75vh;
+  background-image: url(assets/spontini.jpg);
+  height: 82vh;
+  display: grid;
+  place-content: center;
+  
+  text-align: center;
 }
 
-.menu {
-  background-color: beige;
-  font-size: 55px;
-  height: 75vh;
+.contact-elements {
+  background-color: rgb(145, 185, 145);
+  font-size: 45px;
+  margin: 15px;
+}
+
+.number {
+  font-size: 35px;
 }
 
 .hide {
@@ -76,5 +95,5 @@ body {
 }
 
 .show {
-  display: block;
+  display: grid;
 }
