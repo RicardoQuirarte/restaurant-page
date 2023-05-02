@@ -7,6 +7,7 @@ const initialPageContent = renderInitialPage();
 const contactPage = renderContact();
 const menuPage = renderMenu();
 
+// Tab-switching logic
 initialPageContent.home.addEventListener('click', () => {
     menuPage.menu.classList.replace('show', 'hide');
     contactPage.contact.classList.replace('show', 'hide');
