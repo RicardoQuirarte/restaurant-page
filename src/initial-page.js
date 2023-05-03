@@ -1,5 +1,4 @@
 import elementFactory from "./factory";
-// import logo from './assets';**
 
 export default function renderInitialPage   () {
   const container = document.querySelector('#content');
@@ -21,15 +20,9 @@ export default function renderInitialPage   () {
   header.appendChild(contact);
 
   // Body
-
-
-  // const mylogo = new Image();**
-  // mylogo.src = logo;**
-
-
   const logo = elementFactory('body-element', '', 'logo');
   const description = elementFactory('body-element', 'The placer of eating pizza');
-  const someText = elementFactory('body-element', 'Expect soon our new location in Mexico!');
+  const someText = elementFactory('body-element', 'Expect soon our new location in Mexico!', 'expect');
   body.appendChild(logo);
   body.appendChild(description);
   body.appendChild(someText);

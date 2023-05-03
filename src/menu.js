@@ -6,17 +6,17 @@ import especialiPizza from './assets/pizza-speciali.jpg';
 import cremebuleDessert from './assets/cremebrulee.jpg';
 import profiteroleDessert from './assets/profiteroles.jpg';
 
-const classic = new Image(250);
+const classic = new Image(275);
 classic.src = classicPizza;
-const mediterranean = new Image(250);
+const mediterranean = new Image(275);
 mediterranean.src = mediterraneanPizza;
-const golose = new Image(250);
+const golose = new Image(275);
 golose.src = golosePizza;
-const especiali = new Image(250);
+const especiali = new Image(275);
 especiali.src = especialiPizza;
-const cremebule = new Image(250);
+const cremebule = new Image(275);
 cremebule.src = cremebuleDessert;
-const profiterole = new Image(250);
+const profiterole = new Image(275);
 profiterole.src = profiteroleDessert;
 
 export default function renderMenu   () {
@@ -27,27 +27,34 @@ export default function renderMenu   () {
     container.appendChild(menu);
 
     // Menu elements
-    const pizzas = elementFactory('header-menu', 'Pizzas');
-    container.appendChild(pizzas);
+    const pizzas = elementFactory('headers-menu', 'Pizzas');
+    menu.appendChild(pizzas);
+
+    const containerDiv = elementFactory('container-div');
+    menu.appendChild(containerDiv);
     const pizza1 = elementFactory('menu-elements', 'Classic');
-    menu.appendChild(pizza1);
+    containerDiv.appendChild(pizza1);
     pizza1.appendChild(classic);
     const pizza2 = elementFactory('menu-elements', 'Mediterranean');
-    menu.appendChild(pizza2);
+    containerDiv.appendChild(pizza2);
     pizza2.appendChild(mediterranean);
     const pizza3 = elementFactory('menu-elements', 'Golose');
-    menu.appendChild(pizza3);
+    containerDiv.appendChild(pizza3);
     pizza3.appendChild(golose);
     const pizza4 = elementFactory('menu-elements', 'Especiali');
-    menu.appendChild(pizza4);
+    containerDiv.appendChild(pizza4);
     pizza4.appendChild(especiali);
-    // const desserts = elementFactory('menu-elements', 'Desserts');
-    // menu.appendChild(desserts);
+
+    const desserts = elementFactory('headers-menu', 'Desserts');
+    menu.appendChild(desserts);
+
+    const containerDiv2 = elementFactory('container-div');
+    menu.appendChild(containerDiv2);
     const dessert1 = elementFactory('menu-elements', 'Cremebule');
-    menu.appendChild(dessert1);
+    containerDiv2.appendChild(dessert1);
     dessert1.appendChild(cremebule);
     const dessert2 = elementFactory('menu-elements', 'Profiterole');
-    menu.appendChild(dessert2);
+    containerDiv2.appendChild(dessert2);
     dessert2.appendChild(profiterole);
 
     return { menu };
