@@ -1,6 +1,12 @@
+@font-face {
+  font-family: didot;
+  src: url(./assets/GFSDidot-Regular.ttf);
+}
+
 body {
   margin: 0px;
   color: white;
+  font-family: 'didot';
 }
 
 .header {
@@ -38,7 +44,7 @@ body {
   margin: 0px;
   display: grid;
   place-content: center;
-  background-color: black;
+  background-color: #22c55e;
   padding-bottom: 10px;
 }
 
@@ -68,22 +74,9 @@ body {
 .menu-elements {
   display: grid;
   place-content: center;
-  background-color: beige;
+  background-color: white;
   border: 5px;
   border-color: white;
-}
-
-.footer {
-  color: white;
-  font-size: 25px;
-  height: 8vh;
-  margin: 0px;
-  display: grid;
-  place-content: center;
-  background-color: black;
-  position: absolute;
-  bottom: 0px;
-  width: 100%;
 }
 
 .contact-page {
@@ -95,15 +88,22 @@ body {
 }
 
 .contact-elements {
-  background-color: rgb(145, 185, 145);
-  font-size: 45px;
-  margin-left: 150px;
-  margin-right: 150px;
-  margin-bottom: 50px;
+  background-color: #ef4444;
+  color: white;
+  font-size: 35px;
 }
 
-.number {
-  font-size: 35px;
+.footer {
+  color: white;
+  font-size: 30px;
+  height: 8vh;
+  margin: 0px;
+  display: grid;
+  place-content: center;
+  background-color: black;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 .hide {

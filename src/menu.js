@@ -22,14 +22,13 @@ profiterole.src = profiteroleDessert;
 export default function renderMenu   () {
     const container = document.querySelector('#content');
 
-    // const pizzas = elementFactory('header-menu', 'Pizzas');
-    // container.appendChild(pizzas);
-
     // Menu Div
     const menu = elementFactory('menu', '', 'hide');
     container.appendChild(menu);
 
     // Menu elements
+    const pizzas = elementFactory('header-menu', 'Pizzas');
+    container.appendChild(pizzas);
     const pizza1 = elementFactory('menu-elements', 'Classic');
     menu.appendChild(pizza1);
     pizza1.appendChild(classic);
